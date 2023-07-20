@@ -1,2 +1,2 @@
 # Discord Cross Server Chat
- Cross Server Chat Discord Bot
+ Cross server discord chat bot using nextcord
