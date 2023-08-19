@@ -14,11 +14,11 @@ class SetupCog(commands.Cog):
             await interaction.response.send_message(f"You have already setup a cross-chat channel, use command /check_cross_chat_channel", ephemeral=True)
         else:
             database.add_channel_id(channel.id, guild_id)
-            await interaction.response.send_message(f"You have added <#{channel.id}> as your advertising channel", ephemeral=True)
+            await interaction.response.send_message(f"You have added <#{channel.id}> as your cross-chat channel", ephemeral=True)
     
     @nextcord.slash_command(name="remove_channel", description="Remove Channel ID")
     async def remove_channel(self, interaction: nextcord.Interaction, channel: nextcord.TextChannel):
-        await interaction.response.send_message(f"You have removed <#{channel.id}> as your advertising channel", ephemeral=True)
+        await interaction.response.send_message(f"You have removed <#{channel.id}> as your cross-chat channel", ephemeral=True)
         database.remove_channel_id(channel.id)
         
     @nextcord.slash_command(name="check_cross_chat_channel", description="Check cross-chat channel")
